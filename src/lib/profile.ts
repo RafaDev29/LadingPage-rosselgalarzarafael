@@ -1,6 +1,8 @@
 import {
+  siApachekafka,
   siDocker,
   siExpress,
+  siGraphql,
   siJavascript,
   siMongodb,
   siMysql,
@@ -10,7 +12,9 @@ import {
   siPm2,
   siPostgresql,
   siPython,
+  siRabbitmq,
   siReact,
+  siRedis,
   siSpringboot,
   siTypescript,
   siUbuntu,
@@ -69,6 +73,8 @@ export const skills: SkillCategory[] = [
       { name: "Domain-Driven Design" },
       { name: "Microservicios" },
       { name: "APIs REST" },
+      { name: "Kafka", icon: siApachekafka, color: "#EEF1F8" },
+      { name: "RabbitMQ", icon: siRabbitmq },
       { name: "Pipelines de despliegue en la nube" },
     ],
   },
@@ -83,6 +89,8 @@ export const skills: SkillCategory[] = [
       { name: "Express", icon: siExpress, color: "#EEF1F8" },
       { name: "TypeScript", icon: siTypescript },
       { name: "JavaScript", icon: siJavascript },
+      { name: "GraphQL", icon: siGraphql },
+      { name: "WebSockets", color: "#7DD3FC" }, // protocolo sin marca: ondas de radio (lucide)
     ],
   },
   {
@@ -118,6 +126,7 @@ export const skills: SkillCategory[] = [
       { name: "PostgreSQL", icon: siPostgresql },
       { name: "MongoDB", icon: siMongodb },
       { name: "MySQL", icon: siMysql },
+      { name: "Redis", icon: siRedis },
     ],
   },
 ];

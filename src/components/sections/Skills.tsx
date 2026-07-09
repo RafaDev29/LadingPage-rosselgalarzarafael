@@ -4,6 +4,7 @@ import { motion, type Variants } from "framer-motion";
 import {
   Cloud,
   Database,
+  Radio,
   Server,
   Smartphone,
   Sparkles,
@@ -60,15 +61,24 @@ const card: Variants = {
   show: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.7, ease: "easeOut" } },
 };
 
+/**
+ * Respaldo para tecnologías sin logo en simple-icons: AWS (retirado por
+ * marca registrada) y WebSockets (protocolo, no producto).
+ */
+const FALLBACK_ICONS: Record<string, LucideIcon> = {
+  AWS: Cloud,
+  WebSockets: Radio,
+};
+
 /** Chip de tecnología con el logo oficial de la marca */
 function TechChip({ item }: { item: SkillItem }) {
+  const Fallback = FALLBACK_ICONS[item.name] ?? Sparkles;
   return (
     <li className="flex items-center gap-2.5 rounded-lg border border-starlight/10 bg-graphite-light px-3 py-2 text-sm text-stardust transition-colors group-hover:text-starlight">
       {item.icon ? (
         <TechIcon icon={item.icon} color={item.color} className="size-4 shrink-0" />
       ) : (
-        // AWS ya no está en simple-icons (retirado por marca): nube en su naranja oficial
-        <Cloud className="size-4 shrink-0" style={{ color: item.color }} />
+        <Fallback className="size-4 shrink-0" style={{ color: item.color }} />
       )}
       {item.name}
     </li>
@@ -132,8 +142,15 @@ export function Skills() {
                       {category.items.map((item) => (
                         <li
                           key={item.name}
-                          className="rounded-full border border-nebula/30 bg-nebula/10 px-4 py-1.5 font-mono text-sm text-nebula-bright"
+                          className="flex items-center gap-2 rounded-full border border-nebula/30 bg-nebula/10 px-4 py-1.5 font-mono text-sm text-nebula-bright"
                         >
+                          {item.icon && (
+                            <TechIcon
+                              icon={item.icon}
+                              color={item.color}
+                              className="size-4 shrink-0"
+                            />
+                          )}
                           {item.name}
                         </li>
                       ))}
