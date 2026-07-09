@@ -1,26 +1,115 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+ * Paleta "Espectro Estelar" — los astros tienen colores distintos, y la UI también:
+ * ─ abyss / graphite   → negro espacial y grafito azulado (fondos)
+ * ─ nebula             → violeta nebulosa (acento principal)
+ * ─ stellar            → dorado de estrellas clase K/G (acento cálido)
+ * ─ comet              → azul hielo de estrellas calientes (detalles)
+ * ─ starlight / stardust → texto principal y secundario
+ *
+ * Tailwind v4: los tokens definidos en @theme generan utilidades
+ * automáticamente (bg-abyss, text-nebula-bright, border-stellar/30, etc.)
+ */
+@theme {
+  --color-abyss: #050505;
+  --color-graphite: #0e1116;
+  --color-graphite-light: #161a21;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-nebula: #8b5cf6;
+  --color-nebula-bright: #a78bfa;
+  --color-nebula-dim: #2e2354;
+
+  --color-stellar: #d69a45;
+  --color-stellar-bright: #f2c879;
+
+  --color-comet: #7dd3fc;
+
+  --color-starlight: #eef1f8;
+  --color-stardust: #9aa3b8;
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Animaciones ambientales (CSS puro). Conviven sin conflicto con Framer Motion. */
+  --animate-twinkle: twinkle 5s ease-in-out infinite;
+  --animate-twinkle-slow: twinkle 8s ease-in-out infinite;
+  --animate-float: float 8s ease-in-out infinite;
+  --animate-orbit: orbit 40s linear infinite;
+  --animate-pulse-glow: pulse-glow 4s ease-in-out infinite;
+  --animate-shooting: shooting 9s ease-in infinite;
+
+  @keyframes twinkle {
+    0%,
+    100% {
+      opacity: 0.35;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-14px);
+    }
+  }
+
+  @keyframes orbit {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%,
+    100% {
+      box-shadow: 0 0 45px -14px rgba(167, 139, 250, 0.35);
+    }
+    50% {
+      box-shadow: 0 0 80px -14px rgba(167, 139, 250, 0.6);
+    }
+  }
+
+  /* Estrella fugaz: destello que cruza en diagonal y desaparece */
+  @keyframes shooting {
+    0% {
+      transform: translate3d(0, 0, 0);
+      opacity: 0;
+    }
+    2% {
+      opacity: 1;
+    }
+    9% {
+      transform: translate3d(-55vw, 38vh, 0);
+      opacity: 0;
+    }
+    100% {
+      transform: translate3d(-55vw, 38vh, 0);
+      opacity: 0;
+    }
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-abyss);
+  color: var(--color-starlight);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Selección de texto acorde a la paleta */
+::selection {
+  background: var(--color-nebula);
+  color: var(--color-starlight);
 }
