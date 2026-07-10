@@ -6,7 +6,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { profile } from "@/lib/profile";
 
 const NARRATIVE =
-  "Ingeniero de Sistemas e Informática, especializado en el ecosistema Node.js: diseño arquitecturas escalables con DDD sobre NestJS e infraestructura AWS. Construyo APIs REST, microservicios y pipelines de despliegue en la nube — y cuando la misión lo pide, también piloteo el frontend con Next.js y Vue.";
+  "Desarrollador Backend con más de 3 años navegando el ecosistema Node.js: arquitecturas escalables con DDD y Clean Architecture sobre NestJS e infraestructura AWS. Cofundador de QhatuPE, plataforma SaaS de e-commerce con más de 100 tiendas activas en producción. Llevo productos desde la concepción hasta producción — serverless, monitoreo en tiempo real e integración de IA — y cuando la misión lo pide, piloteo el frontend con Next.js y Vue.";
 
 const container: Variants = {
   hidden: {},
@@ -22,6 +22,7 @@ const TELEMETRY = [
   { label: "sector", value: "ecosistema Node.js" },
   { label: "propulsión", value: "NestJS · AWS · DDD" },
   { label: "misión", value: "APIs REST · microservicios · CI/CD" },
+  { label: "insignia", value: "cofundador · QhatuPE" },
   { label: "copiloto", value: "ᓚᘏᗢ michi a bordo" },
   { label: "estado", value: "en órbita estable" },
 ];

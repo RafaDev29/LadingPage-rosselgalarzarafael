@@ -2,16 +2,25 @@
 
 import { useEffect, useState } from "react";
 import { motion, useMotionValueEvent, useScroll, useSpring } from "framer-motion";
-import { Mail, Orbit, Rocket, Star, UserRound, type LucideIcon } from "lucide-react";
+import {
+  BriefcaseBusiness,
+  Mail,
+  Orbit,
+  Rocket,
+  Star,
+  UserRound,
+  type LucideIcon,
+} from "lucide-react";
 import { GithubIcon, GitlabIcon, LinkedinIcon } from "@/components/ui/BrandIcons";
 import { profile } from "@/lib/profile";
 
-const NAV_LINKS: { href: string; label: string; icon: LucideIcon }[] = [
-  { href: "#sobre-mi", label: "Sobre mí", icon: UserRound },
-  { href: "#habilidades", label: "Habilidades", icon: Orbit },
-  { href: "#proyectos", label: "Proyectos", icon: Rocket },
-  { href: "#clientes", label: "Clientes", icon: Star },
-  { href: "#contacto", label: "Contacto", icon: Mail },
+const NAV_LINKS: { href: string; label: string; short: string; icon: LucideIcon }[] = [
+  { href: "#sobre-mi", label: "Sobre mí", short: "Perfil", icon: UserRound },
+  { href: "#experiencia", label: "Experiencia", short: "Misiones", icon: BriefcaseBusiness },
+  { href: "#habilidades", label: "Habilidades", short: "Skills", icon: Orbit },
+  { href: "#proyectos", label: "Proyectos", short: "Proyectos", icon: Rocket },
+  { href: "#clientes", label: "Clientes", short: "Clientes", icon: Star },
+  { href: "#contacto", label: "Contacto", short: "Señal", icon: Mail },
 ];
 
 const SOCIALS = [
@@ -141,7 +150,7 @@ export function Navbar() {
         style={{ x: "-50%" }}
         className="fixed bottom-[max(1rem,env(safe-area-inset-bottom))] left-1/2 z-50 md:hidden"
       >
-        <ul className="flex items-center gap-1 rounded-full border border-starlight/10 bg-abyss/85 px-2.5 py-2 shadow-[0_8px_40px_-8px_rgba(139,92,246,0.45)] backdrop-blur-xl">
+        <ul className="flex items-center gap-0.5 rounded-full border border-starlight/10 bg-abyss/85 px-2 py-2 shadow-[0_8px_40px_-8px_rgba(139,92,246,0.45)] backdrop-blur-xl">
           {NAV_LINKS.map((link) => {
             const Icon = link.icon;
             const isActive = active === link.href;
@@ -150,7 +159,7 @@ export function Navbar() {
                 <a
                   href={link.href}
                   aria-label={link.label}
-                  className="relative flex flex-col items-center gap-0.5 rounded-full px-3.5 py-1.5"
+                  className="relative flex flex-col items-center gap-0.5 rounded-full px-2.5 py-1.5"
                 >
                   {isActive && (
                     <motion.span
@@ -169,7 +178,7 @@ export function Navbar() {
                       isActive ? "text-nebula-bright" : "text-stardust/70"
                     }`}
                   >
-                    {link.label.replace("Sobre mí", "Perfil")}
+                    {link.short}
                   </span>
                 </a>
               </li>

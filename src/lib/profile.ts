@@ -140,6 +140,88 @@ export const exploring: SkillItem[] = [
   { name: "Java · Spring Boot", icon: siSpringboot },
 ];
 
+/* ─── Experiencia Profesional (Bitácora de Misiones) ──────────────────────── */
+
+export type Experience = {
+  company: string;
+  url?: string;
+  role: string;
+  location: string;
+  period: string;
+  current?: boolean;
+  /** Logro insignia que se muestra como badge destacado */
+  highlight?: string;
+  bullets: string[];
+  stack: string[];
+};
+
+// Bullets curados con enfoque backend (del CV completo)
+export const experience: Experience[] = [
+  {
+    company: "QhatuPE",
+    url: "https://qhatupe.com",
+    role: "Cofundador & Desarrollador Full Stack",
+    location: "Lima, Perú",
+    period: "2025 — presente",
+    current: true,
+    highlight: "+100 tiendas activas",
+    bullets: [
+      "Cofundé la plataforma SaaS que permite a emprendedores peruanos crear tiendas virtuales en minutos, con integración de WhatsApp, Yape, Plin y Culqi.",
+      "Arquitecté el backend con NestJS y el frontend con Next.js: sistema de planes con pasarela de pagos, dominio personalizado y subdominios dinámicos por tienda.",
+      "Más de 100 tiendas creadas, con clientes activos generando ventas reales a través de la plataforma.",
+    ],
+    stack: ["NestJS", "Next.js", "AWS"],
+  },
+  {
+    company: "D&A Intelligent Solutions",
+    role: "Desarrollador Full Stack",
+    location: "Madrid, España · remoto",
+    period: "ene 2025 — dic 2025",
+    bullets: [
+      "Servicios backend con integración de IA en NestJS, desplegados en AWS EC2 tras API Gateway.",
+      "Funciones serverless con AWS Lambda para procesamiento de datos de IA y consultas asíncronas.",
+      "Contenericé servicios con Docker (imágenes en ECR) e integré ECS con balanceo ALB.",
+    ],
+    stack: ["NestJS", "AWS Lambda", "Docker", "ECS"],
+  },
+  {
+    company: "SYS & NET del Perú",
+    role: "Desarrollador Full Stack",
+    location: "Lima, Perú",
+    period: "nov 2023 — may 2026",
+    bullets: [
+      "Plataformas de monitoreo de flotas vehiculares con APIs REST en NestJS, desplegadas en EC2 y API Gateway.",
+      "Procesamiento de datos GPS con NestJS y Spring Boot, incluyendo scripts de retransmisión en Python.",
+      "WebSockets para monitoreo en tiempo real y arquitectura de almacenamiento distribuido en S3.",
+    ],
+    stack: ["NestJS", "Spring Boot", "Python", "AWS S3"],
+  },
+  {
+    company: "OPSELI SAC",
+    role: "Desarrollador Full Stack",
+    location: "Lima, Perú",
+    period: "ene 2023 — sep 2023",
+    bullets: [
+      "Servicios backend con Node.js desplegados en DigitalOcean.",
+      "Interfaces web responsivas con Vue.js, optimizando experiencia de usuario y rendimiento.",
+    ],
+    stack: ["Node.js", "Vue.js", "DigitalOcean"],
+  },
+];
+
+export const education = [
+  {
+    school: "Universidad Tecnológica del Perú",
+    degree: "Bachiller en Ingeniería de Sistemas e Informática",
+    period: "2018 — 2024",
+  },
+  {
+    school: "Universidad Nacional de Ingeniería",
+    degree: "Curso de Modelamiento de Datos",
+    period: "ene 2022 — mar 2022",
+  },
+];
+
 /* ─── Proyectos (Dimensiones Exploradas) ──────────────────────────────────── */
 
 export type Project = {
@@ -153,9 +235,15 @@ export const projects: Project[] = [
   {
     name: "Monitor S4",
     description:
-      "Plataforma de monitoreo vehicular en tiempo real: posiciones, eventos y alertas en vivo.",
+      "Sistema SaaS de gestión de alertas: análisis en tiempo real, integración de APIs de terceros y monitoreo continuo de vehículos con alertas inteligentes.",
     tags: ["NestJS", "WebSockets", "AWS"],
     tracking: true,
+  },
+  {
+    name: "SIMTRA",
+    description:
+      "Monitoreo inteligente de transformadores eléctricos: alertas en tiempo real, detección temprana de fallos y optimización del mantenimiento preventivo.",
+    tags: ["Tiempo real", "Alertas"],
   },
   {
     name: "Edispatch",
@@ -171,41 +259,54 @@ export const projects: Project[] = [
     tracking: true,
   },
   {
-    name: "Reportes PDLL",
-    description: "Motor de reportes operativos con generación programada y exportación.",
-    tags: ["NestJS", "PostgreSQL"],
-  },
-  {
-    name: "Plataforma Fox",
-    description: "Gestión integral de flotas: unidades, conductores y telemetría.",
-    tags: ["Node.js", "AWS", "Docker"],
-    tracking: true,
-  },
-  {
     name: "Ebeacons",
     description: "Telemetría de activos con beacons BLE y geocercas.",
     tags: ["IoT", "NestJS"],
-  },
-  {
-    name: "Edriver",
-    description: "Aplicación móvil para conductores: rutas, checklists y eventos en línea.",
-    tags: ["React Native", "WebSockets"],
-    tracking: true,
-  },
-  {
-    name: "Logistics",
-    description: "Orquestación logística de extremo a extremo con trazabilidad total.",
-    tags: ["Microservicios", "DDD"],
-  },
-  {
-    name: "Inspección Técnica",
-    description:
-      "Aplicación de inspección técnica vehicular con evidencia fotográfica y flujos offline.",
-    tags: ["React Native", "NestJS"],
   },
 ];
 
 /* ─── Clientes (Constelaciones Aliadas) ───────────────────────────────────── */
 
-// TODO: reemplaza los placeholders por los nombres reales de tus 5 clientes.
-export const clients = ["Cliente Orión", "Cliente Lyra", "Cliente Vega", "Cliente Sirius", "Cliente Andrómeda"];
+export type Client = {
+  name: string;
+  /** Razón social o nombre completo (se muestra pequeño) */
+  fullName?: string;
+  /** Sector para la ficha de catálogo estelar */
+  sector: string;
+  service: string;
+  tags: string[];
+};
+
+export const clients: Client[] = [
+  {
+    name: "Palomino Olivares & Asociados",
+    fullName: "Abogados Consultores S. Civil de R.L.",
+    sector: "legaltech & geoespacial",
+    service:
+      "CostaTech, plataforma legal para abogados, y una plataforma geoespacial de minas y predios con datos en GeoJSON.",
+    tags: ["Next.js", "NestJS", "Docker"],
+  },
+  {
+    name: "Satelitexa",
+    fullName: "Satelital Exabyte E.I.R.L.",
+    sector: "telemetría satelital",
+    service:
+      "Servicios de retransmisión GPS con arquitectura tolerante a caídas hacia OSINERGMIN, SUTRAN, Navitel y CarCool.",
+    tags: ["Node.js", "TypeScript"],
+  },
+  {
+    name: "Center GPS Perú",
+    fullName: "Center GPS Perú S.A.C.",
+    sector: "rastreo vehicular",
+    service:
+      "Retransmisión de tramas GPS en tiempo real con recuperación ante caídas, integrando OSINERGMIN, SUTRAN, Navitel y CarCool.",
+    tags: ["Node.js", "TypeScript"],
+  },
+  {
+    name: "CECOM",
+    sector: "vigilancia en tiempo real",
+    service:
+      "Servicios backend en NestJS para vigilancia y monitoreo en tiempo real, con WebSockets y Apache Kafka sobre PostgreSQL.",
+    tags: ["NestJS", "Kafka", "WebSockets"],
+  },
+];
