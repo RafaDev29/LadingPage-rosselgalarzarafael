@@ -36,6 +36,15 @@ export const profile = {
     "Ingeniero de Sistemas e Informática especializado en el ecosistema Node.js: arquitecturas escalables con DDD, NestJS e infraestructura en AWS.",
   email: "rosselgalarzarafael@gmail.com",
   githubUser: "RafaDev29",
+  siteUrl: "https://web29.uk",
+  /** Variantes de búsqueda del nombre: cubren "Rafael Rossel", "Rossel Galarza", nombre completo y alias. */
+  alternateNames: [
+    "Rafael Rossel",
+    "Rossel Galarza",
+    "Rafael Andrés Rossel Galarza",
+    "Rafael Rossel Galarza",
+    "dev29",
+  ],
   links: {
     github: "https://github.com/RafaDev29",
     gitlab: "https://gitlab.com/rosselgalarzarafael",
