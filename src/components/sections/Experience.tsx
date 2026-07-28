@@ -52,7 +52,7 @@ export function Experience() {
           <motion.span
             aria-hidden
             style={{ top: shipY }}
-            className="absolute -left-[5px] size-[11px] rounded-full bg-starlight shadow-[0_0_16px_4px] shadow-comet/70"
+            className="absolute -left-[5px] size-[11px]   bg-starlight shadow-[0_0_16px_4px] shadow-comet/70"
           />
 
           <ol className="space-y-14">
@@ -70,13 +70,13 @@ export function Experience() {
                   {/* Nodo-estrella de la misión */}
                   <span
                     aria-hidden
-                    className={`absolute -left-[5px] top-2 size-[11px] rounded-full shadow-[0_0_14px_3px] ${color.star} ${
+                    className={`absolute -left-[5px] top-2 size-[11px]   shadow-[0_0_14px_3px] ${color.star} ${
                       mission.current ? "animate-twinkle" : ""
                     }`}
                   />
 
                   <article
-                    className={`rounded-2xl border bg-graphite/50 p-7 backdrop-blur-md transition-all duration-300 sm:p-8 ${
+                    className={`  border bg-graphite/50 p-7 backdrop-blur-md transition-all duration-300 sm:p-8 ${
                       mission.current
                         ? "border-nebula/40 animate-pulse-glow"
                         : "border-starlight/10 hover:border-starlight/20"
@@ -99,7 +99,7 @@ export function Experience() {
                             mission.company
                           )}
                           {mission.highlight && (
-                            <span className="rounded-full border border-stellar/40 bg-stellar/10 px-3 py-0.5 font-mono text-[11px] font-normal text-stellar-bright">
+                            <span className="  border border-stellar/40 bg-stellar/10 px-3 py-0.5 font-mono text-[11px] font-normal text-stellar-bright">
                               {mission.highlight}
                             </span>
                           )}
@@ -118,7 +118,7 @@ export function Experience() {
                     <ul className="mt-5 space-y-2.5">
                       {mission.bullets.map((bullet) => (
                         <li key={bullet} className="flex gap-3 text-sm leading-7 text-stardust">
-                          <span aria-hidden className={`mt-2.5 size-1 shrink-0 rounded-full ${color.star}`} />
+                          <span aria-hidden className={`mt-2.5 size-1 shrink-0   ${color.star}`} />
                           {bullet}
                         </li>
                       ))}
@@ -128,7 +128,7 @@ export function Experience() {
                       {mission.stack.map((tech) => (
                         <li
                           key={tech}
-                          className="rounded-md border border-starlight/10 bg-graphite-light px-2.5 py-1 font-mono text-xs text-stardust"
+                          className="  border border-starlight/10 bg-graphite-light px-2.5 py-1 font-mono text-xs text-stardust"
                         >
                           {tech}
                         </li>
@@ -150,7 +150,7 @@ export function Experience() {
           >
             <span
               aria-hidden
-              className="absolute -left-[5px] top-2 size-[11px] rounded-full bg-starlight/60 shadow-[0_0_10px_2px] shadow-starlight/30"
+              className="absolute -left-[5px] top-2 size-[11px]   bg-starlight/60 shadow-[0_0_10px_2px] shadow-starlight/30"
             />
             <div className="flex flex-wrap gap-x-10 gap-y-4">
               {education.map((item) => (

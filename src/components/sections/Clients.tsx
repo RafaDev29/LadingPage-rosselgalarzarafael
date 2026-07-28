@@ -69,11 +69,11 @@ export function Clients() {
       {/* Órbitas de fondo cruzando la sección */}
       <div
         aria-hidden
-        className="absolute -left-40 top-24 size-[42rem] rounded-full border border-dashed border-nebula/8"
+        className="absolute -left-40 top-24 size-[42rem]   border border-dashed border-nebula/8"
       />
       <div
         aria-hidden
-        className="absolute -right-56 bottom-10 size-[36rem] rounded-full border border-dashed border-stellar/8"
+        className="absolute -right-56 bottom-10 size-[36rem]   border border-dashed border-stellar/8"
       />
 
       <div className="relative mx-auto max-w-6xl px-6 py-32">
@@ -86,8 +86,8 @@ export function Clients() {
           {/* El sistema binario central custodiado por el gato mayor */}
           <div aria-hidden className="relative hidden h-40 w-56 sm:block">
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-orbit [animation-duration:26s]">
-              <span className="absolute -left-10 -top-1 size-3 rounded-full bg-nebula-bright shadow-[0_0_30px_7px] shadow-nebula-bright/40" />
-              <span className="absolute left-10 -top-1 size-2 rounded-full bg-stellar-bright shadow-[0_0_24px_5px] shadow-stellar/40" />
+              <span className="absolute -left-10 -top-1 size-3   bg-nebula-bright shadow-[0_0_30px_7px] shadow-nebula-bright/40" />
+              <span className="absolute left-10 -top-1 size-2   bg-stellar-bright shadow-[0_0_24px_5px] shadow-stellar/40" />
             </div>
             <CatConstellation className="absolute left-1/2 top-1/2 w-32 -translate-x-1/2 -translate-y-1/2 opacity-60" />
           </div>
@@ -112,7 +112,7 @@ export function Clients() {
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
-                  className={`group relative h-full overflow-hidden rounded-2xl border border-starlight/10 bg-graphite/50 backdrop-blur-md transition-all duration-300 ${entry.glow}`}
+                  className={`group relative h-full overflow-hidden   border border-starlight/10 bg-graphite/50 backdrop-blur-md transition-all duration-300 ${entry.glow}`}
                 >
                   {/* Cielo de la constelación felina */}
                   <div className="relative border-b border-starlight/5 bg-abyss/50">
@@ -130,7 +130,7 @@ export function Clients() {
                     <header className="flex items-start gap-3">
                       <span
                         aria-hidden
-                        className={`mt-1.5 size-2 shrink-0 animate-twinkle rounded-full ${entry.dot}`}
+                        className={`mt-1.5 size-2 shrink-0 animate-twinkle   ${entry.dot}`}
                       />
                       <div>
                         <h3 className="text-lg font-semibold tracking-tight text-starlight">
@@ -149,7 +149,7 @@ export function Clients() {
                       {client.tags.map((tag) => (
                         <li
                           key={tag}
-                          className="rounded-md border border-starlight/10 bg-graphite-light px-2.5 py-1 font-mono text-xs text-stardust"
+                          className="  border border-starlight/10 bg-graphite-light px-2.5 py-1 font-mono text-xs text-stardust"
                         >
                           {tag}
                         </li>

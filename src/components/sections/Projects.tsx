@@ -76,12 +76,12 @@ function GammaRayBurst({
       </motion.div>
 
       {/* Núcleo del estallido */}
-      <span className={`relative size-2 rounded-full bg-starlight shadow-[0_0_30px_10px] ${glow}`} />
+      <span className={`relative size-2   bg-starlight shadow-[0_0_30px_10px] ${glow}`} />
 
       {/* Onda expansiva */}
       <motion.span
         style={{ scale: ringScale, opacity: ringOpacity }}
-        className={`absolute size-24 rounded-full border ${ring}`}
+        className={`absolute size-24   border ${ring}`}
       />
 
       {/* Designación del evento */}
@@ -156,14 +156,14 @@ export function Projects() {
             return (
               <article
                 key={project.name}
-                className={`group relative w-[78vw] shrink-0 rounded-2xl border border-starlight/10 bg-graphite/50 p-8 backdrop-blur-md transition-all duration-300 sm:w-96 ${accent.card}`}
+                className={`group relative w-[78vw] shrink-0   border border-starlight/10 bg-graphite/50 p-8 backdrop-blur-md transition-all duration-300 sm:w-96 ${accent.card}`}
               >
                 <div className="mb-8 flex items-start justify-between">
                   {/* Número con supernova en hover */}
                   <span className="relative inline-block">
                     <span
                       aria-hidden
-                      className="absolute -inset-2 rounded-full border border-current opacity-0 group-hover:animate-ping group-hover:opacity-40"
+                      className="absolute -inset-2   border border-current opacity-0 group-hover:animate-ping group-hover:opacity-40"
                     />
                     <span
                       className={`relative font-mono text-4xl font-semibold text-starlight/10 transition-colors duration-300 ${accent.number}`}
@@ -172,7 +172,7 @@ export function Projects() {
                     </span>
                   </span>
                   {project.tracking && (
-                    <span className="flex items-center gap-1.5 rounded-full border border-stellar/40 bg-stellar/10 px-3 py-1 font-mono text-[11px] text-stellar-bright">
+                    <span className="flex items-center gap-1.5   border border-stellar/40 bg-stellar/10 px-3 py-1 font-mono text-[11px] text-stellar-bright">
                       <Satellite className="size-3" />
                       rastreo vehicular
                     </span>
@@ -190,7 +190,7 @@ export function Projects() {
                   {project.tags.map((tag) => (
                     <li
                       key={tag}
-                      className="rounded-md border border-starlight/10 bg-graphite-light px-2.5 py-1 font-mono text-xs text-stardust"
+                      className="  border border-starlight/10 bg-graphite-light px-2.5 py-1 font-mono text-xs text-stardust"
                     >
                       {tag}
                     </li>
@@ -203,7 +203,7 @@ export function Projects() {
           {/* Última tarjeta: invitación */}
           <a
             href="#contacto"
-            className="flex w-[60vw] shrink-0 items-center justify-center rounded-2xl border border-dashed border-nebula/30 p-8 font-mono text-sm text-nebula-bright transition-colors hover:border-nebula-bright hover:bg-nebula/5 sm:w-72"
+            className="flex w-[60vw] shrink-0 items-center justify-center   border border-dashed border-nebula/30 p-8 font-mono text-sm text-nebula-bright transition-colors hover:border-nebula-bright hover:bg-nebula/5 sm:w-72"
           >
             ¿la próxima dimensión? →
           </a>

@@ -81,7 +81,7 @@ export function Navbar() {
         style={{ x: "-50%" }}
         className="fixed left-1/2 top-4 z-50 w-[min(92vw,52rem)]"
       >
-        <nav className="relative flex h-14 items-center justify-between rounded-full border border-starlight/10 bg-abyss/70 px-5 shadow-[0_8px_40px_-12px_rgba(139,92,246,0.35)] backdrop-blur-xl">
+        <nav className="relative flex h-14 items-center justify-between   border border-starlight/10 bg-abyss/70 px-5 shadow-[0_8px_40px_-12px_rgba(139,92,246,0.35)] backdrop-blur-xl">
           <a href="#" className="group font-mono text-sm tracking-tight text-starlight">
             <span
               aria-hidden
@@ -100,7 +100,7 @@ export function Navbar() {
               <li key={link.href} className="relative">
                 <a
                   href={link.href}
-                  className={`relative block rounded-full px-3.5 py-1.5 transition-colors ${
+                  className={`relative block   px-3.5 py-1.5 transition-colors ${
                     active === link.href ? "text-starlight" : "hover:text-starlight"
                   }`}
                 >
@@ -108,7 +108,7 @@ export function Navbar() {
                     <motion.span
                       layoutId="nav-active"
                       transition={{ type: "spring", stiffness: 380, damping: 32 }}
-                      className="absolute inset-0 rounded-full border border-nebula/40 bg-nebula/15 shadow-[0_0_18px_-4px] shadow-nebula-bright/60"
+                      className="absolute inset-0   border border-nebula/40 bg-nebula/15 shadow-[0_0_18px_-4px] shadow-nebula-bright/60"
                     />
                   )}
                   <span className="relative">{link.label}</span>
@@ -150,7 +150,7 @@ export function Navbar() {
         style={{ x: "-50%" }}
         className="fixed bottom-[max(1rem,env(safe-area-inset-bottom))] left-1/2 z-50 md:hidden"
       >
-        <ul className="flex items-center gap-0.5 rounded-full border border-starlight/10 bg-abyss/85 px-2 py-2 shadow-[0_8px_40px_-8px_rgba(139,92,246,0.45)] backdrop-blur-xl">
+        <ul className="flex items-center gap-0.5   border border-starlight/10 bg-abyss/85 px-2 py-2 shadow-[0_8px_40px_-8px_rgba(139,92,246,0.45)] backdrop-blur-xl">
           {NAV_LINKS.map((link) => {
             const Icon = link.icon;
             const isActive = active === link.href;
@@ -159,13 +159,13 @@ export function Navbar() {
                 <a
                   href={link.href}
                   aria-label={link.label}
-                  className="relative flex flex-col items-center gap-0.5 rounded-full px-2.5 py-1.5"
+                  className="relative flex flex-col items-center gap-0.5   px-2.5 py-1.5"
                 >
                   {isActive && (
                     <motion.span
                       layoutId="dock-active"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                      className="absolute inset-0 rounded-full border border-nebula/40 bg-nebula/20 shadow-[0_0_20px_-4px] shadow-nebula-bright/70"
+                      className="absolute inset-0   border border-nebula/40 bg-nebula/20 shadow-[0_0_20px_-4px] shadow-nebula-bright/70"
                     />
                   )}
                   <Icon

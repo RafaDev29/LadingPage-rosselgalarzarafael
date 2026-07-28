@@ -58,7 +58,7 @@ export function Hero() {
       >
         {/* Brazos espirales multicolor girando */}
         <div
-          className="absolute inset-0 animate-orbit rounded-full [animation-duration:70s]"
+          className="absolute inset-0 animate-orbit   [animation-duration:70s]"
           style={{
             background:
               "conic-gradient(from 0deg, transparent 0deg, rgba(167,139,250,0.32) 50deg, transparent 110deg, rgba(242,200,121,0.22) 170deg, transparent 230deg, rgba(125,211,252,0.2) 290deg, transparent 360deg)",
@@ -68,7 +68,7 @@ export function Hero() {
 
         {/* Núcleo galáctico: resplandor cálido y difuso, sin mirada */}
         <div
-          className="absolute inset-[28%] rounded-full"
+          className="absolute inset-[28%]  "
           style={{
             background:
               "radial-gradient(circle, rgba(242,200,121,0.35), rgba(167,139,250,0.22) 45%, transparent 70%)",
@@ -78,11 +78,11 @@ export function Hero() {
 
         {/* Anillo de polvo orbital */}
         <div
-          className="absolute inset-10 animate-orbit rounded-full border border-dashed border-nebula-bright/15"
+          className="absolute inset-10 animate-orbit   border border-dashed border-nebula-bright/15"
           style={{ animationDirection: "reverse", animationDuration: "110s" }}
         >
-          <span className="absolute left-1/2 top-0 size-1.5 -translate-x-1/2 rounded-full bg-comet/90 shadow-[0_0_12px_2px] shadow-comet/50" />
-          <span className="absolute bottom-6 right-10 size-2 rounded-full bg-stellar-bright/90 shadow-[0_0_12px_2px] shadow-stellar/50" />
+          <span className="absolute left-1/2 top-0 size-1.5 -translate-x-1/2   bg-comet/90 shadow-[0_0_12px_2px] shadow-comet/50" />
+          <span className="absolute bottom-6 right-10 size-2   bg-stellar-bright/90 shadow-[0_0_12px_2px] shadow-stellar/50" />
         </div>
       </motion.div>
 
@@ -145,7 +145,7 @@ export function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
               href="#habilidades"
-              className="rounded-full bg-nebula px-7 py-3 text-sm font-medium text-starlight shadow-[0_0_50px_-12px] shadow-nebula-bright transition-colors hover:bg-nebula-bright hover:text-abyss"
+              className="  bg-nebula px-7 py-3 text-sm font-medium text-starlight shadow-[0_0_50px_-12px] shadow-nebula-bright transition-colors hover:bg-nebula-bright hover:text-abyss"
             >
               Explorar el sistema
             </motion.a>
@@ -153,7 +153,7 @@ export function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
               href="#contacto"
-              className="rounded-full border border-stellar/40 px-7 py-3 text-sm font-medium text-stellar-bright backdrop-blur-sm transition-colors hover:border-stellar-bright hover:bg-stellar/10"
+              className="  border border-stellar/40 px-7 py-3 text-sm font-medium text-stellar-bright backdrop-blur-sm transition-colors hover:border-stellar-bright hover:bg-stellar/10"
             >
               Enviar señal
             </motion.a>

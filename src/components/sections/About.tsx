@@ -69,10 +69,10 @@ export function About() {
             whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="rounded-2xl border border-starlight/10 bg-graphite/50 p-7 backdrop-blur-md"
+            className="  border border-starlight/10 bg-graphite/50 p-7 backdrop-blur-md"
           >
             <p className="mb-5 flex items-center gap-2 font-mono text-xs uppercase tracking-[0.25em] text-nebula-bright">
-              <span className="size-1.5 animate-twinkle rounded-full bg-nebula-bright" />
+              <span className="size-1.5 animate-twinkle   bg-nebula-bright" />
               telemetría / {profile.alias}
             </p>
             <dl className="space-y-4 font-mono text-sm">

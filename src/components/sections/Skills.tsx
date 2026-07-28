@@ -74,7 +74,7 @@ const FALLBACK_ICONS: Record<string, LucideIcon> = {
 function TechChip({ item }: { item: SkillItem }) {
   const Fallback = FALLBACK_ICONS[item.name] ?? Sparkles;
   return (
-    <li className="flex items-center gap-2.5 rounded-lg border border-starlight/10 bg-graphite-light px-3 py-2 text-sm text-stardust transition-colors group-hover:text-starlight">
+    <li className="flex items-center gap-2.5   border border-starlight/10 bg-graphite-light px-3 py-2 text-sm text-stardust transition-colors group-hover:text-starlight">
       {item.icon ? (
         <TechIcon icon={item.icon} color={item.color} className="size-4 shrink-0" />
       ) : (
@@ -115,15 +115,15 @@ export function Skills() {
                 <motion.div key={category.id} variants={card} className="sm:col-span-2">
                   <MagneticCard
                     strength={0.08}
-                    className="group relative overflow-hidden rounded-2xl border border-nebula/40 bg-graphite/60 p-8 backdrop-blur-md animate-pulse-glow sm:p-10"
+                    className="group relative overflow-hidden   border border-nebula/40 bg-graphite/60 p-8 backdrop-blur-md animate-pulse-glow sm:p-10"
                   >
                     {/* Órbita decorativa de fondo */}
                     <div
                       aria-hidden
-                      className="absolute -right-24 -top-24 size-72 animate-orbit rounded-full border border-dashed border-nebula/20"
+                      className="absolute -right-24 -top-24 size-72 animate-orbit   border border-dashed border-nebula/20"
                     />
                     <div aria-hidden className="absolute -right-24 -top-24 size-72">
-                      <span className="absolute bottom-6 left-8 size-2 rounded-full bg-stellar-bright/80" />
+                      <span className="absolute bottom-6 left-8 size-2   bg-stellar-bright/80" />
                     </div>
 
                     <p className="mb-4 flex items-center gap-2 font-mono text-xs uppercase tracking-[0.3em] text-stellar-bright">
@@ -142,7 +142,7 @@ export function Skills() {
                       {category.items.map((item) => (
                         <li
                           key={item.name}
-                          className="flex items-center gap-2 rounded-full border border-nebula/30 bg-nebula/10 px-4 py-1.5 font-mono text-sm text-nebula-bright"
+                          className="flex items-center gap-2   border border-nebula/30 bg-nebula/10 px-4 py-1.5 font-mono text-sm text-nebula-bright"
                         >
                           {item.icon && (
                             <TechIcon
@@ -164,7 +164,7 @@ export function Skills() {
             return (
               <motion.div key={category.id} variants={card}>
                 <MagneticCard
-                  className={`group h-full rounded-2xl border border-starlight/10 bg-graphite/50 p-7 backdrop-blur-md transition-all duration-300 ${accent.card}`}
+                  className={`group h-full   border border-starlight/10 bg-graphite/50 p-7 backdrop-blur-md transition-all duration-300 ${accent.card}`}
                 >
                   <Icon
                     className={`mb-5 size-6 transition-transform duration-300 group-hover:scale-110 ${accent.icon}`}
@@ -198,7 +198,7 @@ export function Skills() {
             {exploring.map((item) => (
               <li
                 key={item.name}
-                className="flex items-center gap-2 rounded-lg border border-starlight/5 bg-graphite/40 px-3 py-1.5 text-xs text-stardust opacity-75 transition-opacity hover:opacity-100"
+                className="flex items-center gap-2   border border-starlight/5 bg-graphite/40 px-3 py-1.5 text-xs text-stardust opacity-75 transition-opacity hover:opacity-100"
               >
                 {item.icon && (
                   <TechIcon icon={item.icon} color={item.color} className="size-3.5 shrink-0" />
